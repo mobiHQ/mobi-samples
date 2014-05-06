@@ -4,6 +4,7 @@
 .classpath
 .project
 .settings/
+.metadata/
 
 # https://github.com/github/gitignore/blob/master/Java.gitignore
 *.class
