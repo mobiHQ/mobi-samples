@@ -52,6 +52,7 @@ public class DictionaryMobiCore {
 		
 		mobi.addConcept(cWord);
 		mobi.addConcept(cTranslatedWord);
+		mobi.addConcept(cDictionary);
 		
 		
 		// Class x Instances
@@ -71,7 +72,7 @@ public class DictionaryMobiCore {
 		//Relations
 		
 		// Dictionary has words
-		Relation rDictionaryHasWords = mobi.createUnidirecionalCompositionRelationship("has-words");
+		Relation rDictionaryHasWords = mobi.createUnidirecionalCompositionRelationship("has");
 		rDictionaryHasWords.setClassA(cDictionary);
 		rDictionaryHasWords.setClassB(cWord);
 		
@@ -81,7 +82,7 @@ public class DictionaryMobiCore {
 		mobi.addConcept(rDictionaryHasWords);
 		
 		// Word has several translations
-		Relation rWordHasTranslations = mobi.createUnidirecionalCompositionRelationship("has-translation");
+		Relation rWordHasTranslations = mobi.createUnidirecionalCompositionRelationship("has");
 		rWordHasTranslations.setClassA(cWord);
 		rWordHasTranslations.setClassB(cTranslatedWord);
 		
